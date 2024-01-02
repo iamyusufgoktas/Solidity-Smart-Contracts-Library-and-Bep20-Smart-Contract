@@ -42,10 +42,10 @@ Extends ERC1967Proxy and adds functionality for managing the admin. The admin is
 * _beforeFallback(): Ensures that the admin cannot access the fallback function, enhancing security.
 
 ## Overall Flow:
-*       TransparentUpgradeableProxy is deployed with an initial implementation (_logic), admin address, and optional initialization data (_data).
-*       The proxy can be used to interact with the functionality of the initial implementation.
-*       The admin can upgrade the implementation to a new contract while preserving the proxy's storage state.
-*       The admin can also change, and other functionalities can be performed using the proxy.
+* TransparentUpgradeableProxy is deployed with an initial implementation (_logic), admin address, and optional initialization data (_data).
+* The proxy can be used to interact with the functionality of the initial implementation.
+* The admin can upgrade the implementation to a new contract while preserving the proxy's storage state.
+* The admin can also change, and other functionalities can be performed using the proxy.
 
 This pattern allows for upgrades to the contract logic while maintaining the state stored in the proxy. The proxy is transparent in the sense that it allows direct access to the state of the logic contract.
 
